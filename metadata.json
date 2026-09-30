@@ -1,0 +1,6 @@
+{
+  "name": "RojgaarX",
+  "description": "Cooperative-owned digital service marketplace connecting Labour Cooperative Federations with households and institutions under Fair Wage standards.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

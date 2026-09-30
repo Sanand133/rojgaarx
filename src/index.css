@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 5.5rem;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Sleek modern translucent frosted scrollbar with smooth transition */
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(100, 116, 139, 0.35);
+    border-radius: 9999px;
+    backdrop-filter: blur(8px);
+    transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(16, 185, 129, 0.7);
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #F4F1EA;
+    color: #0F172A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  ::selection {
+    background-color: #0C831F;
+    color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+  }
+}
+
+/* Frosted Glass & Modern UI Utility Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.glass-panel-subtle {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(241, 245, 249, 0.8);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+}
+
+/* Ultra-Smooth Shimmer Wave Loading Animation (Frosted Glass & Quick Commerce) */
+@keyframes shimmerWave {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(241, 245, 249, 0.7) 0%,
+    rgba(226, 232, 240, 0.9) 25%,
+    rgba(255, 255, 255, 0.98) 50%,
+    rgba(226, 232, 240, 0.9) 75%,
+    rgba(241, 245, 249, 0.7) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmerWave 1.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+/* Silky smooth glowing pulse */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Quick snappy progress bar on tab / view transitions */
+@keyframes tabProgressZip {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+    opacity: 1;
+  }
+  70% {
+    transform: scaleX(0.85);
+    transform-origin: left;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+    opacity: 0;
+  }
+}
+
+.animate-tab-progress {
+  animation: tabProgressZip 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* High Density Custom Box Shadows & Borders */
+.shadow-hd-sm {
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-hd {
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-hd-lg {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-hd-yellow,
+.shadow-hd-cyan {
+  box-shadow: 4px 4px 0px 0px rgba(6, 182, 212, 1);
+}
+
+.shadow-hd-blue {
+  box-shadow: 4px 4px 0px 0px rgba(59, 130, 246, 1);
+}
+
+.shadow-hd-red {
+  box-shadow: 4px 4px 0px 0px rgba(255, 87, 87, 1);
+}
+
+.shadow-hd-lime {
+  box-shadow: 4px 4px 0px 0px rgba(204, 255, 0, 1);
+}
+
+.shadow-hd-pink {
+  box-shadow: 4px 4px 0px 0px rgba(255, 144, 232, 1);
+}
+
+.brutal-border {
+  border: 2px solid #000000;
+}
+
+.brutal-border-thick {
+  border: 4px solid #000000;
+}
+
+/* Hard offset button interactive states */
+.brutal-btn-active:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 1) !important;
+}
+
+/* Ticker marquee animation */
+@keyframes brutal-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: brutal-marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle radar scan pulse */
+@keyframes radar-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.animate-radar-ring {
+  animation: radar-pulse 2.2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
